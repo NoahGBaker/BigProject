@@ -65,9 +65,9 @@ def check_win():
     if (TTT[0][2] == TTT[1][1] == TTT[2][0]) and (TTT[0][2] is not None):
         winner = TTT[0][2]
         pg.draw.line(screen, (250, 70, 70), (350, 50), (50, 350), 4)
-        if all([all(row) for row in TTT]) and winner is None:
-            draw = True
-        draw_status()
+    if all([all(row) for row in TTT]) and winner is None:
+        draw = True
+    draw_status()
 def drawXO(row, col):
     global TTT, XO
     if row == 1:
